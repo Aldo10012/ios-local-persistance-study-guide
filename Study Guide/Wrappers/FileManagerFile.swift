@@ -45,14 +45,14 @@ class FileManagerFile {
     ///
     /// - Note: if the file does not exist, this method will create it. Otherwise, this
     /// method will override the file's contents
-    func save(contents: String) {
+    func save(string: String) {
         let fileManager = FileManager.default
         let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
 
         if let documentDirectory: URL = urls.first {
             let documentURL = documentDirectory.appendingPathComponent(filename)
             // data you want to write to file
-            let data: Data? = contents.data(using: .utf8)
+            let data: Data? = string.data(using: .utf8)
             do{
               try data!.write(to: documentURL, options: .atomic)
             }catch{
@@ -65,7 +65,7 @@ class FileManagerFile {
     ///
     /// - Note: if the file does not exist, this method will create it. Otherwise, this
     /// method will override the file's contents
-    func save<T: Encodable>(contents: T) {
+    func save<T: Encodable>(encodable: T) {
         let fileManager = FileManager.default
         let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
 
@@ -74,7 +74,7 @@ class FileManagerFile {
             let documentURL = documentDirectory.appendingPathComponent(filename)
             
             // data you want to write to file
-            let personInfo = contents
+            let personInfo = encodable
             let data = try! JSONEncoder().encode(personInfo)
             
             do{
@@ -89,7 +89,7 @@ class FileManagerFile {
     ///
     /// - Note: if the file does not exist, this method will create it. Otherwise, this
     /// method will override the file's contents
-    func save(contents: Data) {
+    func save(data: Data) {
         let fileManager = FileManager.default
         let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
 
@@ -98,7 +98,7 @@ class FileManagerFile {
             let documentURL = documentDirectory.appendingPathComponent(filename)
             
             // data you want to write to file
-            let data = contents
+            let data = data
             
             do{
               try data.write(to: documentURL, options: .atomic)

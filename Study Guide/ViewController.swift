@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct PersonInfo: Codable {
+struct PersonInfo: Codable, Equatable {
     let name: String
     let age: Int
     let height: CGFloat // inches
@@ -73,7 +73,7 @@ class ViewController: UIViewController {
         print(testingFileManager)
         let fManager = FileManagerFile(location: .documents, filename: "data.json")
         let person = PersonInfo(name: "Bob", age: 22, height: 6.0)
-        fManager.save(contents: person)
+        fManager.save(encodable: person)
         let contents: PersonInfo? = fManager.contents() 
         print(contents)
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		635E46E12741D4DC00A3B32D /* UserDefaultsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E46E02741D4DC00A3B32D /* UserDefaultsStoreTests.swift */; };
+		635E46E32741D51B00A3B32D /* PlistFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E46E22741D51B00A3B32D /* PlistFileTests.swift */; };
+		635E46E52741D53800A3B32D /* FileManagerFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E46E42741D53800A3B32D /* FileManagerFileTests.swift */; };
+		635E46E72741D54B00A3B32D /* KeychainStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E46E62741D54B00A3B32D /* KeychainStoreTests.swift */; };
 		637F31A827334FD900E8E335 /* Person.plist in Resources */ = {isa = PBXBuildFile; fileRef = 637F31A727334FD900E8E335 /* Person.plist */; };
 		E1105C132730672A00AA84A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1105C122730672A00AA84A1 /* AppDelegate.swift */; };
 		E1105C152730672A00AA84A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1105C142730672A00AA84A1 /* SceneDelegate.swift */; };
@@ -20,7 +24,23 @@
 		E1BD91CA273089D400764808 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BD91C9273089D400764808 /* KeychainStore.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		635E46DA2741D43200A3B32D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1105C072730672A00AA84A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1105C0E2730672A00AA84A1;
+			remoteInfo = "Study Guide";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		635E46D62741D43200A3B32D /* StudyGuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		635E46DF2741D4DC00A3B32D /* StudyGuideTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudyGuideTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		635E46E02741D4DC00A3B32D /* UserDefaultsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStoreTests.swift; sourceTree = "<group>"; };
+		635E46E22741D51B00A3B32D /* PlistFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistFileTests.swift; sourceTree = "<group>"; };
+		635E46E42741D53800A3B32D /* FileManagerFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerFileTests.swift; sourceTree = "<group>"; };
+		635E46E62741D54B00A3B32D /* KeychainStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStoreTests.swift; sourceTree = "<group>"; };
 		637F31A727334FD900E8E335 /* Person.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Person.plist; sourceTree = "<group>"; };
 		E1105C0F2730672A00AA84A1 /* Study Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1105C122730672A00AA84A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +58,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		635E46D32741D43200A3B32D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1105C0C2730672A00AA84A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,11 +75,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		635E46D72741D43200A3B32D /* StudyGuideTests */ = {
+			isa = PBXGroup;
+			children = (
+				635E46E62741D54B00A3B32D /* KeychainStoreTests.swift */,
+				635E46E42741D53800A3B32D /* FileManagerFileTests.swift */,
+				635E46E22741D51B00A3B32D /* PlistFileTests.swift */,
+				635E46E02741D4DC00A3B32D /* UserDefaultsStoreTests.swift */,
+			);
+			path = StudyGuideTests;
+			sourceTree = "<group>";
+		};
 		E1105C062730672A00AA84A1 = {
 			isa = PBXGroup;
 			children = (
 				E1105C112730672A00AA84A1 /* Study Guide */,
+				635E46D72741D43200A3B32D /* StudyGuideTests */,
 				E1105C102730672A00AA84A1 /* Products */,
+				635E46DF2741D4DC00A3B32D /* StudyGuideTests-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				E1105C0F2730672A00AA84A1 /* Study Guide.app */,
+				635E46D62741D43200A3B32D /* StudyGuideTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +136,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		635E46D52741D43200A3B32D /* StudyGuideTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 635E46DE2741D43200A3B32D /* Build configuration list for PBXNativeTarget "StudyGuideTests" */;
+			buildPhases = (
+				635E46D22741D43200A3B32D /* Sources */,
+				635E46D32741D43200A3B32D /* Frameworks */,
+				635E46D42741D43200A3B32D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				635E46DB2741D43200A3B32D /* PBXTargetDependency */,
+			);
+			name = StudyGuideTests;
+			productName = StudyGuideTests;
+			productReference = 635E46D62741D43200A3B32D /* StudyGuideTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E1105C0E2730672A00AA84A1 /* Study Guide */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1105C232730672F00AA84A1 /* Build configuration list for PBXNativeTarget "Study Guide" */;
@@ -122,6 +181,11 @@
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					635E46D52741D43200A3B32D = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
+						TestTargetID = E1105C0E2730672A00AA84A1;
+					};
 					E1105C0E2730672A00AA84A1 = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -141,11 +205,19 @@
 			projectRoot = "";
 			targets = (
 				E1105C0E2730672A00AA84A1 /* Study Guide */,
+				635E46D52741D43200A3B32D /* StudyGuideTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		635E46D42741D43200A3B32D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1105C0D2730672A00AA84A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -160,6 +232,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		635E46D22741D43200A3B32D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				635E46E32741D51B00A3B32D /* PlistFileTests.swift in Sources */,
+				635E46E52741D53800A3B32D /* FileManagerFileTests.swift in Sources */,
+				635E46E12741D4DC00A3B32D /* UserDefaultsStoreTests.swift in Sources */,
+				635E46E72741D54B00A3B32D /* KeychainStoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1105C0B2730672A00AA84A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,6 +258,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		635E46DB2741D43200A3B32D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1105C0E2730672A00AA84A1 /* Study Guide */;
+			targetProxy = 635E46DA2741D43200A3B32D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E1105C182730672A00AA84A1 /* Main.storyboard */ = {
@@ -196,6 +287,55 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		635E46DC2741D43200A3B32D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Alberto-Dominguez.StudyGuideTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "StudyGuideTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Study Guide.app/Study Guide";
+			};
+			name = Debug;
+		};
+		635E46DD2741D43200A3B32D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Alberto-Dominguez.StudyGuideTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "StudyGuideTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Study Guide.app/Study Guide";
+			};
+			name = Release;
+		};
 		E1105C212730672F00AA84A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -369,6 +509,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		635E46DE2741D43200A3B32D /* Build configuration list for PBXNativeTarget "StudyGuideTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				635E46DC2741D43200A3B32D /* Debug */,
+				635E46DD2741D43200A3B32D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E1105C0A2730672A00AA84A1 /* Build configuration list for PBXProject "Study Guide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
